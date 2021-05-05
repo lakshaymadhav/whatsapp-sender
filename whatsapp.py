@@ -1,7 +1,9 @@
 from selenium import webdriver
 
-
-driver= webdriver.Chrome(r"C:\webdrivers\chromedriver.exe")
+options = webdriver.ChromeOptions()
+options.binary_location = r"C:\Program Files (x86)\Google\Chrome Beta\Application\chrome.exe"
+chrome_driver_binary = r"C:\webdrivers\chromedriver.exe"
+driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
 driver.get('https://web.whatsapp.com/')
 
 name = input('Name of the group or the user: ')
